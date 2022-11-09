@@ -23,17 +23,17 @@
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
     1. Membuat fungsi _decrementCounter() untuk mengurangi counter
-    void _decrementCounter() {
-    setState(() {
-      
-      if (_counter != 0) {
-        _counter--;
-      }else{
-        return; 
+        void _decrementCounter() {
+        setState(() {
+          
+          if (_counter != 0) {
+            _counter--;
+          }else{
+            return; 
+          }
+          
+        });
       }
-      
-    });
-  }
 
     2. Menambahkan FloatingActionButton, - pada kiri layar dan + pada kanan layar dan mengatur visibility(bonus) serta melakukan layouting button tersebut 
     floatingActionButton: 
@@ -56,14 +56,14 @@
           ),
           
         ],
-    )
+        )
 
     3. Menambahkan fungsi conditialNumber untuk menambahkan Text() yang berisi warna merah pada angka genap dan biru pada angka ganjil. Implementasi code sebagai berikut.
-  conditialNumber(){
-    // Apabila_counter % 2 == 0, Maka akan menunjukkan "Genap"  dengan warna merah , selain itu menujukkan "Ganjil" dengan warna biru
-    if(_counter % 2 == 0){
-          return const Text("GENAP",style: TextStyle(color: Colors.red,));
-    } else{
-          return const Text("GANJIL", style: TextStyle(color: Colors.blue,),);
-    }
-  }
+        conditialNumber(){
+        // Apabila_counter % 2 == 0, Maka akan menunjukkan "Genap"  dengan warna merah , selain itu menujukkan "Ganjil" dengan warna biru
+        if(_counter % 2 == 0){
+              return const Text("GENAP",style: TextStyle(color: Colors.red,));
+        } else{
+              return const Text("GANJIL", style: TextStyle(color: Colors.blue,),);
+        }
+      }

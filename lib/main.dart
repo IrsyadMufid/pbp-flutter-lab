@@ -63,11 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _decrementCounter() {
     setState(() {
-      // check if counter == 0, if so, do nothing
+      
       if (_counter != 0) {
         _counter--;
       }else{
-        return;
+        return; // Apabila counter 0 maka tidak melakukan apa-apa
       }
       
     });
@@ -107,13 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-           // if _counter % 2 == 0, display "Even" with  red color, else display "Odd" with blue color
-            Text(
-              _counter % 2 == 0 ? 'Genap' : 'Ganjil',
-              style: TextStyle(
-                color: _counter % 2 == 0 ? Colors.red : Colors.blue,
-              ),
-            ),           
+            conditialNumber(),           
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -143,4 +137,14 @@ class _MyHomePageState extends State<MyHomePage> {
       )
     );
   }
+  conditialNumber(){
+    // Apabila_counter % 2 == 0, Maka akan menunjukkan "Genap"  dengan warna merah , selain itu menujukkan "Ganjil" dengan warna biru
+  if(_counter % 2 == 0){
+        return const Text("GENAP",style: TextStyle(color: Colors.red,));
+  } else{
+        return const Text("GANJIL", style: TextStyle(color: Colors.blue,),);
+  }
+  }
 }
+
+

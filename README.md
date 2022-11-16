@@ -1,5 +1,48 @@
 # counter_7
 
+#Tugas 8
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+- Navigator.push: menambahkan route lain ke atas stack dari Navigator
+- Navigator.pushReplacement: Mengganti ke route lain yang berada di atas stack setelah ditambah sehingga menghilangkan route lama
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Scaffold: Scaffold merupakan widget yang berfungsi sebagai pengatur struktur tata letak visual desain (layout utama) dari aplikasi
+- Appbar: appbar merupakan widget yang berfungsi sebagai header dari aplikasi terletak di bagian atas widget Scaffold dan merupakan bagian utama dari widget Scaffold dan ditampilkan di bagian atas layar
+- Center: Center merupakan widget yang berfungsi mengatur child widget ke bagian tengah layar  
+- Row & Column: row merupakan widget yang berisi beberapa widget yang diatur secara horizontal, sedangkan column merupakan widget yang berisi widget yang diatur secara vertikal
+- Text: text merupakan widget yang digunakan untuk menampilkan teks dalam satu baris di dalam aplikasi
+- Form: Containter untuk melakukan grouping terhadap beberapa form field widget
+- TextFormField: Input dalam berbentuk field text
+- InputDecoration: styling pada input
+- DropdownButtonFormField: Memunculkan menu dropdown
+- TextButton: Membuat button dengan text di dalamnya
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed)
+- onPressed: Merupakan fungsi ketika user selesai menekan widget maka akan dijalankan
+- onSaved: Merupakan fungsi ketika user selesai menyimpan form maka akan dijalankan
+- onChanged: Ketika terjadi perubahan pada event
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter
+Navigator menggunakan `Last In First Out` yang diterapkan pada suatu stack ketika mengganti halaman. Pada nantinya setelah melakukan push, halaman yang berada paling atas atau top of the stack yang akan ditampilkan
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+1. Membuat file drawer.dart yang berisi drawer menu dengan widget drawer yang di route ke counter_7, 
+2. Membuat file budget_form.dart untuk membuat form yang berisi elemen input dan dropdown dengan tipe data input masing-masing (String:judul,  int: nominal, dan Datetime: tanggal)
+3. Membuat file all.dart yang berisi list budget dalam bentuk global dan menyimpan data yang di-input ke dalam list yang telah dibuat
+4. Menampilkan data ke halaman Data Budget dengan melakukan iterasi list
+
+
+
+
+
+
+
+
+
+
+
+
+# Tugas7
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya
   - Widget yang statusnya tidak dapat diubah setelah dibuat atau bersifat immutable selama runtime application disebut sebagai widget stateless. Widget tidak dapat berubah ketika aplikasi berjalan dan properti hanya dapat berubah ketika kita mengatur instance baru untuk widget tertentu. Apabila tidak dilakukan secara demikian, perubahan widget tidak ada terjadi akibat perubahan nilai dari state yang ada selama runtime aplication.
   - Stateful widget propertis nya bersifat mutable, artinya properti dapat diubah dan dapat digambar selama aplikasi sedang berjalan. Hal ini dikarenakan mutable stated disimpan secara terpisah dalam state object yang mana status aplikasi dapat berubah beberapa kali dengan set variabel, input, data yang berbeda. Nilai dari state juga dapat berubah berdasarkan nilai state yang ada selama aplikasi berjalan ketika pengguna berinteraksi dengannya.  

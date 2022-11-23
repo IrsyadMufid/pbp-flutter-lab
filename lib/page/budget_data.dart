@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:counter_7/drawer.dart';
-import 'all.dart' as globals;
+import 'package:counter_7/widgets/drawer.dart';
+import '../models/all.dart' as globals;
 
 class MyDataPage extends StatefulWidget {
   const MyDataPage({super.key});

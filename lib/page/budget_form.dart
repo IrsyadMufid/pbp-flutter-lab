@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:counter_7/drawer.dart';
+import 'package:counter_7/widgets/drawer.dart';
 import 'package:intl/intl.dart';
-import 'all.dart' as globals;
+import '../models/all.dart' as globals;
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});

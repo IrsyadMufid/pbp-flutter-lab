@@ -76,6 +76,17 @@ Fungsi fetchWatchlist() mengambil data menggunakan HTTP dan pemanggilan fungsi g
 	)
 	```
 
+7. Buat fungsi conditionalWatch untuk menentukan apakah sudah ditonton atau belum (bonus)
+  ```conditialWatch(){
+    // Apabila movie.fields.watched == true , Maka udah ditonton, selain itu menujukkan belum nonton
+  if( movie.fields.watched == true){
+        return const Text("Watched",style: TextStyle(fontSize: 16));
+  } else{
+        return const Text("Not Watched", style: TextStyle(fontSize: 16));
+  }
+  }
+  ```
+
 #Tugas 8
 ## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
 - Navigator.push: menambahkan route lain ke atas stack dari Navigator

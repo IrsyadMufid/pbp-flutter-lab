@@ -64,10 +64,7 @@ class MyWatchlistDetailPage extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
-                        trailing: Text(
-                          movie.fields.watched ? "Watched" : "Not Watched",
-                          style: const TextStyle(fontSize: 16),
-                        ),
+                        trailing: conditialWatch(),
                         dense: true,
                       ),
                       ListTile(
@@ -109,5 +106,13 @@ class MyWatchlistDetailPage extends StatelessWidget {
         ],
       ),
     );
+  }
+  conditialWatch(){
+    // Apabila movie.fields.watched == true , Maka udah ditonton, selain itu menujukkan belum nonton
+  if( movie.fields.watched == true){
+        return const Text("Watched",style: TextStyle(fontSize: 16));
+  } else{
+        return const Text("Not Watched", style: TextStyle(fontSize: 16));
+  }
   }
 }
